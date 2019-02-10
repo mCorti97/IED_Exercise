@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>   
+        <meta charset = "utf-8"> 
+        <title>Esercizi per casa</title>   
+    </head>
+    <body>
+        <p>Esercizio 1 <input type = "button" value = "Invia" onclick="oneNumber()"> </p>
+        <p>Esercizio 2 <input type = "button" value = "Invia" onclick="twoNumbers()"></p>
+        <p>Esercizio 3 <input type = "button" value = "Invia" onclick="twoStrings()"></p>
+        
+        <script type = "text/javascript">
+           
+            function oneNumber() {
+                var number = prompt("Inserisci un numero");
+
+                parseInt(number);
+
+                if (number == 10){
+                    alert("Il numero è uguale a 10");
+                }
+            }
+
+            function twoNumbers(){
+                var firstNum = prompt("Inserisci un numero");
+                var secondNum = prompt("Inserisci un altro numero");
+
+                parseInt(firstNum);
+                parseInt(secondNum);
+
+                if (firstNum == secondNum){
+                    alert("I due numeri sono uguali tra loro");
+                }
+            }
+
+            function twoStrings(){
+                var firstString = prompt("Inserisci una stringa");
+                var secondString = prompt("Inserisci un'altra stringa");
+
+                if (firstString == secondString){
+                    alert("Le stringhe sono uguali tra loro");
+                }
+                else{
+                    alert("Le stringhe non sono uguali tra loro")
+                }
+            }
+        </script>
+
+    </body>
+</html>
