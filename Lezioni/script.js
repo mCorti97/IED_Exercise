@@ -65,3 +65,7 @@ function switchPie(myNumber){
     }
 }
 
+ var aNumber = readNumber();
+ var message = switchPie(aNumber);
+ printMessage(message);
+
