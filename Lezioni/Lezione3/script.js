@@ -31,8 +31,6 @@ function simpleCheck(){
     }
 }
 
-simpleCheck();
-
 //IF - ELSE
 
 function binaryCheck(){
@@ -64,8 +62,9 @@ function switchPie(myNumber){
             return 'None';
     }
 }
-
- var aNumber = readNumber();
- var message = switchPie(aNumber);
- printMessage(message);
+ function switchOp(){
+    var aNumber = readNumber();
+    var message = switchPie(aNumber);
+    printMessage(message);
+}
 

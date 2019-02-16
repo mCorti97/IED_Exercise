@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>   
+        <meta charset = "utf-8"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <style>
+        *{
+            outline: none;
+        }
+        .display{
+            display: inline;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        pre{
+            border: 1px solid;
+            padding: 10px;
+            width: 50%;
+        }
+
+        </style>
+        <title>Lezione 2</title>   
+    </head>
+    <body>
+        <a href="../../index.html"><i class="fas fa-arrow-left" style = "font-size:  30px;"></i></a>
+        <h2>Lezione 1 - Introduzione</h2>
+        <p><i>Letto un numero da tastiera, se negativo farne il valore assoluto, se positivo stampare un messaggio. Successivamente stamparne la radice quadrata</i></p>
+        
+
+        <input type="button" value="Avvia" onclick="myFunction()">
+        <input type="button" value="Mostra Codice" id="primo1" class="display" onclick="mostraCodice()">
+        <input type="button" value="Nascondi Codice" id="primo0" class="hide" onclick="nascondiCodice()">
+        
+        <div id="codice" class="hide"><pre>
+        function myFunction(){
+
+            var myNumber = prompt("Write a number:");
+            myNumber = parseInt(myNumber);
+
+            if ( myNumber < 0){
+
+            alert('Given number is negative, Absing it..');
+
+            myNumber = Math.abs(myNumber);
+
+            } else {
+
+            alert("Given number is positive");
+            }
+
+            var squareRoot = Math.sqrt(myNumber);
+
+            alert(squareRoot);
+        }
+        </pre></div>
+        
+        <script type="text/javascript" src="script.js"></script>
+        
+        <!--JS PER BOTTONI -->
+        <script type="text/javascript" src="../../script.js"></script>
+    </body>
+</html>

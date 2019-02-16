@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>   
+        <meta charset = "utf-8"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style>
+        *{
+            outline: none;
+        }
+        .display{
+            display: inline;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        pre{
+        	border: 1px solid;
+        	padding: 10px;
+            width: 50%;
+        }
+
+        </style>
+        <title>Lezione 3</title>   
+    </head>
+    <body>
+        <a href="../../index.html"><i class="fas fa-arrow-left" style = "font-size:  30px;"></i></a>
+        <h2>Lezione 3 - Costrutti Condizionali (If, If-Else, SwitchCase)</h2>
+        <p><i>Letto un numero da tastiera, se uguale a 10 stampare un messaggio.</i></p>
+
+        <input type="button" value="Avvia" onclick="simpleCheck()">
+        <input type="button" value="Mostra Codice" id="primo1" class="display" onclick="mostraCodice()">
+        <input type="button" value="Nascondi Codice" id="primo0" class="hide" onclick="nascondiCodice()">
+
+        <div id="codice" class="hide"><pre>
+		
+		//IF
+
+		function readNumber(){
+		    var myNumber = prompt("Scrivi un numero: ");
+
+		    myNumber = parseInt(myNumber);
+
+		    return myNumber;
+		}
+
+		function printMessage(message){
+		    var myMessage = message;
+
+		    alert(myMessage);
+
+		    return;
+		}
+
+		function isEqualToTen(myNumber){
+		    const COMPARABLE_NUMBER = 10;
+
+		    return myNumber == COMPARABLE_NUMBER;
+		}
+
+		function simpleCheck(){
+		    var readedNumber = readNumber();
+		    var  isThatNumberEqualToTen = isEqualToTen(readedNumber);
+
+		    if (isThatNumberEqualToTen){
+		        printMessage('Sì, il numero è uguale a 10');
+		    }
+		}
+		</pre></div>
+
+        <p><i>Letto un numero da tastiera, se uguale a 10 stampare un messaggio, se diverso stampare un messaggio.</i></p>
+
+        <input type="button" value="Avvia" onclick="binaryCheck()">
+        <input type="button" value="Mostra Codice" id="secondo1" class="display" onclick="mostraCodice1()">
+        <input type="button" value="Nascondi Codice" id="secondo0" class="hide" onclick="nascondiCodice1()">
+        
+        <div id="codice1" class="hide"><pre>
+
+		//IF - ELSE
+
+		function readNumber(){
+		    var myNumber = prompt("Scrivi un numero: ");
+
+		    myNumber = parseInt(myNumber);
+
+		    return myNumber;
+		}
+
+		function isEqualToTen(myNumber){
+		    const COMPARABLE_NUMBER = 10;
+
+		    return myNumber == COMPARABLE_NUMBER;
+		}		
+
+		function binaryCheck(){
+		    var readedNumber = readNumber();
+		    var  isThatNumberEqualToTen = isEqualToTen(readedNumber);
+
+		    if (isThatNumberEqualToTen){
+		        printMessage('Sì, il numero è uguale a 10');
+		    } else{
+		        printMessage('No, il numero non è uguale a 10');
+		    }
+		}
+
+		</pre></div>
+
+
+        <p><i>Letto un numero da tastiera, se uguale a 2, 5, 7, 13 stampare "Primo", se uguale a 10 stampare "Base", se uguale a 8, 64 stampare "Octal", sennò stampare "None".</i></p>
+
+        <input type="button" value="Avvia" onclick="switchOp()">
+        <input type="button" value="Mostra Codice" id="terzo1" class="display" onclick="mostraCodice2()">
+        <input type="button" value="Nascondi Codice" id="terzo0" class="hide" onclick="nascondiCodice2()">
+
+        <div id="codice2" class="hide"><pre>
+
+		//SWITCH CASE
+
+		function readNumber(){
+		    var myNumber = prompt("Scrivi un numero: ");
+
+		    myNumber = parseInt(myNumber);
+
+		    return myNumber;
+		}
+
+
+		function switchPie(myNumber){
+		    switch(myNumber){
+		        case 2:
+		        case 5:
+		        case 7:
+		        case 13:
+		            return 'Primo';
+		        case 10:
+		            return 'Base';
+		        case 8:
+		        case 64:
+		            return 'Octal';
+		        default:
+		            return 'None';
+		    }
+		}
+
+		function printMessage(message){
+		    var myMessage = message;
+
+		    alert(myMessage);
+
+		    return;
+		}
+
+		var aNumber = readNumber();
+		var message = switchPie(aNumber);
+		printMessage(message);
+
+        </pre></div>
+        
+        <script type="text/javascript" src="script.js"></script>
+
+        <!--JS PER BOTTONI -->
+        <script type="text/javascript" src="../../script.js"></script>
+    </body>
+</html>

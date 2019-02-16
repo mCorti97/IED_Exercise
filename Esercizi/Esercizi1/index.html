@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>   
+        <meta charset = "utf-8"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <style>
+        *{
+            outline: none;
+        }
+        .display{
+            display: inline;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        pre{
+            border: 1px solid;
+            padding: 10px;
+            width: 50%;
+        }
+
+        </style>
+        <title>Esercizi 1 </title>   
+    </head>
+    <body>
+        <a href="../../index.html"><i class="fas fa-arrow-left" style = "font-size:  30px;"></i></a>
+        <h2>Esercizi Lezione 2 - Costrutti Condizionali </h2>
+        <p><i>Letto un numero, far stampare un messaggio in caso il numero sia uguale a 10.</i></p>
+
+        <input type="button" value="Avvia" onclick="oneNumber()">
+        <input type="button" value="Mostra Codice" id="primo1" class="display" onclick="mostraCodice()">
+        <input type="button" value="Nascondi Codice" id="primo0" class="hide" onclick="nascondiCodice()">
+
+        <div id="codice" class="hide"><pre>     
+        //Esercizio 1
+
+        function oneNumber() {
+            var number = prompt("Inserisci un numero");
+
+            parseInt(number);
+
+            if (number == 10){
+                    alert("Il numero è uguale a 10");
+            }
+        }
+        </pre></div>
+
+        <p><i>Letti due numeri, far stampare un messaggio in caso siano uguali tra di loro.</i></p>
+
+        <input type="button" value="Avvia" onclick="twoNumbers()">
+        <input type="button" value="Mostra Codice" id="secondo1" class="display" onclick="mostraCodice1()">
+        <input type="button" value="Nascondi Codice" id="secondo0" class="hide" onclick="nascondiCodice1()">
+        
+        <div id="codice1" class="hide"><pre>
+        //Esercizio 2
+
+        function twoNumbers(){
+            var firstNum = prompt("Inserisci un numero");
+             var secondNum = prompt("Inserisci un altro numero");
+
+            parseInt(firstNum);
+            parseInt(secondNum);
+
+            if (firstNum == secondNum){
+                alert("I due numeri sono uguali tra loro");
+            }
+        }
+        </pre></div>
+
+
+        <p><i>Lette due stringhe, far stampare un messaggio in caso risultino uguali tra di loro e un messaggio alternativo in caso contrario.</i></p>
+
+        <input type="button" value="Avvia" onclick="twoStrings()">
+        <input type="button" value="Mostra Codice" id="terzo1" class="display" onclick="mostraCodice2()">
+        <input type="button" value="Nascondi Codice" id="terzo0" class="hide" onclick="nascondiCodice2()">
+
+        <div id="codice2" class="hide"><pre>
+        //Esercizio 3
+
+        function twoStrings(){
+            var firstString = prompt("Inserisci una stringa");
+            var secondString = prompt("Inserisci un'altra stringa");
+
+            if (firstString == secondString){
+                alert("Le stringhe sono uguali tra loro");
+            }
+            else{
+                alert("Le stringhe non sono uguali tra loro")
+             }
+         }
+
+        </pre></div>
+        
+        <script type="text/javascript" src="script.js"></script>
+
+        <!--JS PER BOTTONI -->
+        <script type="text/javascript" src="../../script.js"></script>
+    </body>
+</html>

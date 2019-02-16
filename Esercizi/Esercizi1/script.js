@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>   
-        <meta charset = "utf-8"> 
-        <title>Esercizi per casa</title>   
-    </head>
-    <body>
-        <p>Esercizio 1 <input type = "button" value = "Invia" onclick="oneNumber()"> </p>
-        <p>Esercizio 2 <input type = "button" value = "Invia" onclick="twoNumbers()"></p>
-        <p>Esercizio 3 <input type = "button" value = "Invia" onclick="twoStrings()"></p>
-        <p>Esercizio 4 <input type = "button" value = "Invia" onclick="pause()"></p>
-        <script type = "text/javascript">
-            
             //Esercizio 1
             function oneNumber() {
                 var number = prompt("Inserisci un numero");
@@ -47,22 +34,3 @@
                     alert("Le stringhe non sono uguali tra loro")
                 }
             }
-            
-            //Esercizio 4
-            function pause(){
-                var word = prompt("Inserisci un cibo");
-
-                if (word == 'pizza' || word == 'snack'){
-                    alert("Pausa veloce");
-                }
-                else if (word == 'spaghetti'){
-                    alert("Pausa lunga");
-                }
-                else{
-                    alert("Pausa indefinita");
-                }
-            }
-        </script>
-
-    </body>
-</html>
